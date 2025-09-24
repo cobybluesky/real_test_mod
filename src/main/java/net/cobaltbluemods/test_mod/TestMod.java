@@ -1,6 +1,7 @@
 package net.cobaltbluemods.test_mod;
 
 import com.mojang.logging.LogUtils;
+import net.cobaltbluemods.test_mod.item.ModCreativeModeTabs;
 import net.cobaltbluemods.test_mod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -29,6 +30,7 @@ public class TestMod
     {
         IEventBus modEventBus = context.getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
 
         // Register the commonSetup method for modloading
@@ -53,6 +55,7 @@ public class TestMod
     {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.SAPPHIRE);
+            event.accept(ModItems.CALEBIUM);
         }
     }
 

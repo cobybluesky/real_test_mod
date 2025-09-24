@@ -1,3 +1,6 @@
 {
-  "item.test_mod.sapphire": "Sapphire"
+  "item.test_mod.sapphire": "Sapphire",
+  "item.test_mod.calebium": "Calebium",
+
+  "creativetab.test_mod_tab": "Caleb's Great Mod of Fun"
 }
